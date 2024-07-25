@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지 비밀번호 재설정</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .TopBar {
+            width: 100%;
+            height: 100px; 
+            background-color: white;
+            display: flex;
+            align-items: center;
+            padding-left: 2%;
+        }
+        #menu {
+            width: 50px;
+            height: 50%;
+            border: 1px solid grey;
+            border-radius: 10%;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #menu:hover {
+            background-color: gainsboro;
+        }
+        #logo {
+            height: 90%;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+        .main {
+            width: 60%;
+            margin-top: 5%;
+        }
+        #LoginInfo {
+            font-size: x-large;
+            font-weight: bold;
+            color: gray;
+            margin-left: auto;
+            margin-right: 10%;
+        }
+        .container {
+            border: 2.5px solid black;
+            box-sizing: border-box;
+            background-color: white;
+            padding: 5%;
+            margin-bottom: 100px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: rgb(199, 230, 255);
+            color: black;
+            border: 1.5px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="TopBar">
+        <img id="menu" src="./img/menu.png" alt="메뉴 아이콘">
+        <img id="logo" src="./img/logo_rmv.png" alt="내일 로고">
+        <h1>마이페이지</h1>
+        <div id="LoginInfo"><span id="UserName"></span>님</div>
+    </div>
+    
+    <div class="main">
+        <h1>비밀번호 재설정</h1>    
+
+        <div class="container">
+            <div class="form-group">
+                <label for="current-password">현재 비밀번호</label>
+                <input type="password" id="current-password" required>
+            </div>
+            <div class="form-group">
+                <label for="new-password">새 비밀번호</label>
+                <input type="password" id="new-password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">새 비밀번호 확인</label>
+                <input type="password" id="confirm-password" required>
+            </div>
+
+            <button id="reset-button">비밀번호 재설정</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("menu").addEventListener("click", function() {
+            window.location.href = 'main.html'; // 메인 페이지 링크 추가
+        });
+
+        document.getElementById("reset-button").addEventListener("click", function() {
+            const currentPassword = document.getElementById("current-password").value;
+            const newPassword = document.getElementById("new-password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            if (newPassword === confirmPassword) {
+                // 비밀번호가 일치할 때의 동작
+                alert("비밀번호가 성공적으로 변경되었습니다.");
+            } else {
+                // 비밀번호가 일치하지 않을 때의 동작
+                alert("새 비밀번호가 일치하지 않습니다. 제대로 입력했는지 확인하세요.");
+            }
+        });
+    </script>        
+
+</body>
+</html>
