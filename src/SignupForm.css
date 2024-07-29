@@ -1,0 +1,47 @@
+/* 회원가입 폼 스타일 */
+.signup-container {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.signup-form {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.signup-form h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.input-group input {
+  font-size: 16px;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+}
