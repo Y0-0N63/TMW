@@ -41,6 +41,9 @@
   border: 0px;
   font-size: 27px;
 }
+#searchBtn:hover{
+  background-color: lightgray;
+}
 
 #header a {
   font-size: 20px;
@@ -109,7 +112,7 @@ a {
   display: block;
 }
 
-/*⭐바디*/
+/**********⭐바디*************/
 #body {
   margin: 20px 0 10px 250px;
   display: flex;
@@ -132,13 +135,14 @@ a {
 #login {
   width: 250px;
   height: 250px;
-  border: 3px solid black;
+  border: 2px solid black;
   font-size: 15px;
   font-weight: 700;
   text-align: center;
   margin-left: 50px;
   line-height: 60px;
 }
+
 
 #psnLogin {
   width: 200px;
@@ -172,11 +176,15 @@ a {
   background-color: #0168bd;
   border: 0px;
 }
+#psnLogin:hover,#cpnLogin:hover,#mngLogin:hover{
+  background-color: lightgray;
+  cursor: pointer;
+}
 
 #notice {
   width: 600px;
   height: 150px;
-  border: 3px solid black;
+  border: 2px solid black;
 }
 
 h3 {
@@ -216,7 +224,7 @@ li {
   height: 70%;
 }
 
-/*⭐푸터*/
+/**************푸터***********/
 #footer {
   position: fixed;
   bottom: 0;
