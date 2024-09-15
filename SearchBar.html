@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색</title>
+    <link rel="stylesheet" href="SearchBar.css">
+</head>
+<body>
+    <div class="TopBar">
+        <img id="menu" src="./img/menu.png" alt="메뉴 아이콘"> 
+        <img id="logo" src="./img/logo_rmv.png" alt="내일 로고"> 
+        <h1>검색</h1>
+        <div id="LoginInfo"><span id="TopUserName"></span>님</div>
+    </div>
+    
+    <div class="main">
+        <h1 id="searchHeader">검색어를 입력하세요</h1>
+        <div class="search_container">
+            <input type="text" id="text_find" placeholder="검색어 입력" />
+            <button id="findtextBtn">검색</button>
+        </div>
+
+        <div class="container" id="result_container">
+            <!-- 검색 결과 표시 영역 -->
+        </div>
+    </div>
+
+    <script src="SearchBar.js"></script>
+</body>
+</html>
