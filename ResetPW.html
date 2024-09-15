@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지 비밀번호 재설정</title>
+    <link rel="stylesheet" href="ResetPW.css">
+</head>
+<body>
+    <div class="TopBar">
+        <img id="menu" src="./img/menu.png" alt="메뉴 아이콘">
+        <img id="logo" src="./img/logo_rmv.png" alt="내일 로고">
+        <h1>마이페이지</h1>
+        <div id="LoginInfo"><span id="TopUserName"></span>님</div>
+    </div>
+    
+    <div class="main">
+        <h1>비밀번호 재설정</h1>    
+
+        <div class="container">
+            <div class="form-group">
+                <label for="current-password">현재 비밀번호</label>
+                <input type="password" id="current-password" required>
+            </div>
+            <div class="form-group">
+                <label for="new-password">새 비밀번호</label>
+                <input type="password" id="new-password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">새 비밀번호 확인</label>
+                <input type="password" id="confirm-password" required>
+            </div>
+
+            <button id="reset-button">비밀번호 재설정</button>
+        </div>
+    </div>
+
+    <script src="ResetPW.js"></script>
+</body>
+</html>
