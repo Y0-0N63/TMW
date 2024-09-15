@@ -27,3 +27,7 @@ document.getElementById("reset-button").addEventListener("click", function() {
         alert("새 비밀번호가 일치하지 않습니다. 제대로 입력했는지 확인하세요.");
     }
 });
+
+document.getElementById("menu").addEventListener("click", function() {
+    window.location.href = '메인페이지링크'; // **나중에 메인페이지 링크 추가 예정**
+});
