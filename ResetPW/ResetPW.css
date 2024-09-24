@@ -1,38 +1,34 @@
 body {
-    background-color: whitesmoke;
+    background-color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
 }
+
+/*상단바*/
 .TopBar {
     height: 100px; 
     background-color: white;
     display: flex;
     align-items: center;
+    justify-content: space-between; 
     padding-left: 2%;
-}
-#menu {
-    width: 50px;
-    height: 50%;
-    border: 1px solid grey;
-    border-radius: 10%;
-    padding: 10px;
-    cursor: pointer;
-}
-#menu:hover {
-    background-color: gainsboro;
+    padding-right: 2%;
 }
 #logo {
     height: 90%;
     padding-left: 2%;
     padding-right: 2%;
 }
+
+/*메인*/
 .main {
     flex: 1;
     margin-top: 5%;
     margin-left: 20%;
+    color: #000000;
 }
 #LoginInfo {
     font-size: x-large;
@@ -43,11 +39,12 @@ body {
 }
 .container {
     width: 80%;
-    border: 2.5px solid black;
     box-sizing: border-box;
     background-color: white;
     padding: 5%;
     margin-bottom: 100px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
+    color: #0168bd;
 }
 .form-group {
     margin-bottom: 15px;
@@ -65,14 +62,120 @@ input[type="password"] {
     border-radius: 5px;
 }
 button {
-    padding: 10px 20px;
     background-color: rgb(199, 230, 255);
+}
+#reset-button {
+    padding: 10px 20px;
     color: black;
     border: 1.5px solid black;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 15px;
 }
-button:hover {
-    background-color: whitesmoke;
+#reset-button:hover {
+    background-color: lightgray;
+}
+
+/*카테고리바*/
+#category {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #0168bd;
+    padding: 10px;
+    padding-left: 15%;
+}
+.menu {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px 0 50px;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.menu .submenu a:hover {
+    color: red;
+}
+.menu a {
+    color: white;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 100%;
+    min-width: 150px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+.submenu a {
+    display: block;
+    color: #333;
+    padding: 6px 0;
+    text-decoration: none;
+}
+.menu:hover .submenu {
+    display: block;
+}
+
+/* 하단바 */
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #0168bd;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+.footer_a {
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    /* padding-right: 20px; */
+    line-height: 50px;
+}
+
+/* 상단바 검색창 */
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; 
+}
+#search {
+    width: 300px;
+    height: 50px;
+    margin-right: 10px; 
+    font-size: large;
+}
+#searchBtn {
+    width: 60px;
+    height: 50px;
+    background-color: transparent;
+    border: 0;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 5px;
+}
+#searchBtn:hover {
+    background-color: lightgray;
+}
+#header nav a {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 10px;
+    color: #0168bd;
+    text-decoration: none;
+}
+#header nav a:hover {
+    text-decoration: underline;
 }
