@@ -44,7 +44,3 @@ document.getElementById('text_find').addEventListener('keydown', function(event)
         performSearch(); // 검색 수행
     }
 });
-
-document.getElementById("menu").addEventListener("click", function() {
-    window.location.href = '메인페이지링크'; // **나중에 메인페이지 링크 추가 예정**
-});
