@@ -7,27 +7,58 @@
     <link rel="stylesheet" href="UserInfo.css"> 
 </head>
 <body>
-
-<div class="TopBar">
-    <img id="menu" src="./img/menu.png" alt="메뉴 아이콘">
-    <img id="logo" src="./img/logo_rmv.png" alt="내일 로고">
-    <h1>마이페이지</h1>
-    <div id="LoginInfo"><span id="TopUserName"></span>님</div>
+    <!-- 상단바 -->
+    <div class="TopBar">
+        <img id="logo" src="./img/logo_rmv.png" alt="내일 로고">
+        <h1>마이페이지</h1>
+        <!-- 검색 -->
+        <header id="header">
+            <input type="text" id="search" placeholder="검색어를 입력하세요">
+            <button id="searchBtn">🔍</button>
+        </header>
+        <!-- 로그인 정보 -->
+        <div id="LoginInfo"><span id="TopUserName"></span>님</div>
+    </div>
+    
+<!-- 카테고리바 -->
+<div id="category">
+    <div class="menu">
+    <a href="">일자리이음</a>
+    <div class="submenu">
+        <a href="../JobSearchPage/일자리이음.html">일자리 찾기&신청하기</a>
+    </div>
+    </div>
+    <div class="menu">
+    <a href="#">지식이음</a>
+    <div class="submenu">
+        <a href="센터 찾기 페이지로 이동">센터 찾기&프로그램 신청하기</a>
+    </div>
+    </div>
+    <div class="menu">
+    <a href="#">고객센터</a>
+    <div class="submenu">
+        <a href="#자주묻는 질문 페이지로 이동">자주묻는 질문</a>
+        <a href="#문의/제안/신고">문의/제안/신고</a>
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">위치기반서비스이용약관</a>
+    </div>
+    </div>
 </div>
-
+<!-- 회원정보 -->
 <div class="main">
     <h1><span id="MainUserName"></span>의 회원정보</h1>
-
+<!-- 회원정보 칸 -->
     <div class="container">
-        
+        <!-- 회원정보 -->
         <div class="Info">회원정보
             <div id="Info_sign">정보 보호를 위해 연락처 일부만 확인 가능하며, 수정화면에서 정확한 정보 확인이 가능합니다.</div>
-            <button id="Update">수정하기</button>
+            <button id="UpdateButton">수정하기</button>
             <div class="userInfo">
                 <div>이름: <span id="UserName"></span></div>
                 <div>전화번호: <span id="UserPhone"></span></div>
                 <div>주소(구): <span id="UserAddress"></span></div>
-                <div>경력: <span id="Career"></span></div>
+                <div>경력사항 / 기간: <span id="Career"></span></div>
                 <div>건강 상태: <span id="HealthState"></span></div>
                 <div>희망 프로그램: <span id="WishList"></span></div>
             </div>
@@ -35,6 +66,7 @@
         <br>
         <hr>
         <br>
+        <!-- 포인트 -->
         <div class="Info">포인트
             <div class="userPoint">
                 현재 <span id="MainUserName"></span> 님의 포인트는 <span id="Point"></span>점 입니다.
@@ -43,6 +75,7 @@
         <br>
         <hr>
         <br>
+        <!-- 회원탈퇴 -->
         <div class="Info">탈퇴하기
             <div class="userDeleted">
                 <b>※ 회원탈퇴를 하기 전에 안내 사항을 꼭 확인해주세요. </b>
@@ -59,10 +92,19 @@
                 <button id="DeletedButton">탈퇴하기</button>
             </div>
         </div>
-
     </div>
+</div>
+<!-- 푸터 -->
+<div id="footer">
+    <a class="footer_a" href="">자주 묻는 질문 |</a>
+    <a class="footer_a" href="">문의/제안/신고 |</a>
+    <a class="footer_a" href="">이용약관 |</a>
+    <a class="footer_a" href="">개인정보처리방침 |</a>
+    <a class="footer_a" href="">위치기반서비스이용약관 |</a>
+    <br />
 </div>
 
 <script src="UserInfo.js"></script> 
+
 </body>
 </html>
