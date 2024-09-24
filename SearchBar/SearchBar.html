@@ -7,13 +7,40 @@
     <link rel="stylesheet" href="SearchBar.css">
 </head>
 <body>
+    <!-- 상단바 -->
     <div class="TopBar">
-        <img id="menu" src="./img/menu.png" alt="메뉴 아이콘"> 
         <img id="logo" src="./img/logo_rmv.png" alt="내일 로고"> 
         <h1>검색</h1>
+        <!-- 로그인 정보 -->
         <div id="LoginInfo"><span id="TopUserName"></span>님</div>
     </div>
     
+<!-- 카테고리바 -->
+<div id="category">
+    <div class="menu">
+    <a href="">일자리이음</a>
+    <div class="submenu">
+        <a href="../JobSearchPage/일자리이음.html">일자리 찾기&신청하기</a>
+    </div>
+    </div>
+    <div class="menu">
+    <a href="#">지식이음</a>
+    <div class="submenu">
+        <a href="센터 찾기 페이지로 이동">센터 찾기&프로그램 신청하기</a>
+    </div>
+    </div>
+    <div class="menu">
+    <a href="#">고객센터</a>
+    <div class="submenu">
+        <a href="#자주묻는 질문 페이지로 이동">자주묻는 질문</a>
+        <a href="#문의/제안/신고">문의/제안/신고</a>
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">위치기반서비스이용약관</a>
+    </div>
+    </div>
+</div>
+<!-- 검색어 입력 -->
     <div class="main">
         <h1 id="searchHeader">검색어를 입력하세요</h1>
         <div class="search_container">
@@ -25,6 +52,15 @@
             <!-- 검색 결과 표시 영역 -->
         </div>
     </div>
+    <!-- 푸터 -->
+<div id="footer">
+    <a class="footer_a" href="">자주 묻는 질문 |</a>
+    <a class="footer_a" href="">문의/제안/신고 |</a>
+    <a class="footer_a" href="">이용약관 |</a>
+    <a class="footer_a" href="">개인정보처리방침 |</a>
+    <a class="footer_a" href="">위치기반서비스이용약관 |</a>
+    <br />
+</div>
 
     <script src="SearchBar.js"></script>
 </body>
