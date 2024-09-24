@@ -1,9 +1,8 @@
-// 예시 데이터 (서버에서 받아올 데이터로 대체해야 함)
 const userData = {
     name: "홍길동",
     phone: "010-1234-5678",
     address: "서울특별시 강남구",
-    career: "5년",
+    career: "카페 - 3년",
     healthState: "양호",
     wishList: "운동 프로그램",
     points: 1200
@@ -26,8 +25,4 @@ document.getElementById("DeletedButton").addEventListener("click", function() {
     } else {
         alert("안내사항을 확인해주세요.");
     }
-});
-
-document.getElementById("menu").addEventListener("click", function() {
-    window.location.href = '메인페이지링크'; // **나중에 메인페이지 링크 추가 예정**
 });
