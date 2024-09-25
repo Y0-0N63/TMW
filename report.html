@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제/제안/신고 접수</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <!-- 상단 바 -->
+    <header class="TopBar">
+        <img id="logo" src="./logo_rmv (1).png" alt="로고">
+        <h1 class="header-title">문제/제안/신고</h1>
+        <div id="header">
+            <input type="text" id="search" placeholder="검색어를 입력하세요">
+            <button id="searchBtn">🔍</button>
+        </div>
+        <div id="LoginInfo">홍길동님</div>
+    </header>
+
+    <!-- 카테고리 바 -->
+    <div id="category">
+        <div class="menu">
+            <a href="">일자리이음</a>
+            <div class="submenu">
+                <a href="../JobSearchPage/일자리이음.html">일자리 찾기&신청하기</a>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="#">지식이음</a>
+            <div class="submenu">
+                <a href="센터 찾기 페이지로 이동">센터 찾기&프로그램 신청하기</a>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="#">고객센터</a>
+            <div class="submenu">
+                <a href="#자주묻는 질문 페이지로 이동">자주 묻는 질문</a>
+                <a href="#문의/제안/신고">문의/제안/신고</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">위치기반서비스이용약관</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="main">
+        <div class="container">
+            <h1>문제/제안/신고 접수</h1>
+            <form id="report-form">
+                <label for="reportType">제목:</label>
+                <select id="reportType" name="reportType">
+                    <option value="문제">문제</option>
+                    <option value="제안">제안</option>
+                    <option value="신고">신고</option>
+                </select>
+                <br><br>
+                
+                <label for="description"></label>
+                <textarea id="description" name="description" rows="5" required></textarea>
+                <br><br>
+                
+                <button type="submit" class="chatbot-button">제출하기</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer id="footer">
+        <a class="footer_a" href="#">자주 묻는 질문</a> |
+        <a class="footer_a" href="#">문의/제안/신고</a> |
+        <a class="footer_a" href="#">이용약관</a> |
+        <a class="footer_a" href="#">개인정보처리방침</a> |
+        <a class="footer_a" href="#">위치기반서비스 이용약관</a>
+    </footer>
+
+    <!-- 자바스크립트 파일 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>
