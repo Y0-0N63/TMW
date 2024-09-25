@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객센터</title>
+    <link rel="stylesheet" href="faq.css">
+    <style>
+        /* 챗봇 스타일 */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* 기본적으로 숨김 */
+            z-index: 1000;
+        }
+
+        .chatbot-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .chatbot-messages {
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .chatbot-input {
+            display: flex;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+
+        .chatbot-input button {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단 바 -->
+    <header class="TopBar">
+        <img id="logo" src="./logo_rmv (1).png" alt="로고">
+        <h1 class="header-title">고객센터</h1>
+        <div id="header">
+            <input type="text" id="search" placeholder="검색어를 입력하세요">
+            <button id="searchBtn">🔍</button>
+        </div>
+        <div id="LoginInfo">홍길동님</div>
+    </header>
+
+    <!-- 카테고리 바 -->
+    <div id="category">
+        <div class="menu">
+            <a href="">일자리이음</a>
+            <div class="submenu">
+                <a href="../JobSearchPage/일자리이음.html">일자리 찾기&신청하기</a>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="#">지식이음</a>
+            <div class="submenu">
+                <a href="센터 찾기 페이지로 이동">센터 찾기&프로그램 신청하기</a>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="#">고객센터</a>
+            <div class="submenu">
+                <a href="#자주묻는 질문 페이지로 이동">자주 묻는 질문</a>
+                <a href="#문의/제안/신고">문의/제안/신고</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">위치기반서비스이용약관</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="main">
+        <div class="container">
+            <h1>자주 묻는 질문 (FAQ)</h1>
+            <section class="faq-section">
+                <h2>Q1: 노인 일자리와 프로그램은 어떻게 신청할 수 있나요?</h2>
+                <p>A: 온라인 사이트나 가까운 노인복지센터를 통해 가능합니다.</p>
+            </section>
+            <section class="faq-section">
+                <h2>Q2: 일자리 조건은 어떻게 되나요?</h2>
+                <p>A: 일자리 조건은 연령, 건강 상태, 경력 등에 따라 다르며, 자세한 사항은 각 일자리 공고에서 확인할 수 있습니다.</p>
+            </section>
+            <div class="chatbot-container" id="chatbot">
+                <div class="chatbot-header">챗봇</div>
+                <div class="chatbot-messages" id="chatbot-messages"></div>
+                <div class="chatbot-input">
+                    <input type="text" id="user-input" placeholder="질문을 입력하세요...">
+                    <button onclick="sendMessage()">전송</button>
+                </div>
+            </div>
+            <button class="chatbot-button" onclick="toggleChatbot()">채팅으로 질문하기</button>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer id="footer">
+        <a class="footer_a" href="#">자주 묻는 질문</a> |
+        <a class="footer_a" href="#">문의/제안/신고</a> |
+        <a class="footer_a" href="#">이용약관</a> |
+        <a class="footer_a" href="#">개인정보처리방침</a> |
+        <a class="footer_a" href="#">위치기반서비스 이용약관</a>
+    </footer>
+
+    <script src="faq.js"></script> <!-- JavaScript 파일 불러오기 -->
+</body>
+</html>

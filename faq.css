@@ -1,0 +1,186 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 상단 바 */
+.TopBar {
+    height: 100px; 
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 2%;
+}
+
+#logo {
+    height: 90%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+#LoginInfo {
+    font-size: x-large;
+    font-weight: bold;
+    color: gray;
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+.header-title {
+    color: black; 
+}
+
+
+/* 검색 바 */
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; 
+}
+
+#search {
+    width: 300px;
+    height: 50px;
+    margin-right: 10px; 
+    font-size: large;
+}
+
+#searchBtn {
+    width: 60px;
+    height: 50px;
+    background-color: transparent;
+    border: 0;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* 카테고리 바 */
+#category {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #0168bd;
+    padding: 10px;
+    padding-left: 20%;
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px 0 50px;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.menu .submenu a:hover {
+    color: red;
+}
+.menu a {
+    color: white;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 100%;
+    min-width: 150px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+.submenu a {
+    display: block;
+    color: #333;
+    padding: 6px 0;
+    text-decoration: none;
+}
+.menu:hover .submenu {
+    display: block;
+}
+
+/* 메인 컨텐츠 */
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    margin-top: 10px; /* 카테고리 바 아래에 간격 추가 */
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #0168bd;
+}
+
+.faq-section {
+    margin-bottom: 20px;
+}
+
+.faq-section h2 {
+    font-size: large;
+    color: #0168bd;
+    margin-bottom: 10px;
+}
+
+.faq-section p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* 챗봇 버튼 */
+.chatbot-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.chatbot-button {
+    background-color: #0168bd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.chatbot-button:hover {
+    background-color: #014a8c;
+}
+
+/* 푸터 */
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #0168bd;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.footer_a {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer_a:hover {
+    text-decoration: underline;
+}
