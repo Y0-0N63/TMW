@@ -11,7 +11,3 @@ const userData = {
 
 // 상단 로그인 정보와 회원정보 영역에 이름을 설정
 document.getElementById("TopUserName").textContent = userData.name;
-
-document.getElementById("menu").addEventListener("click", function() {
-    window.location.href = 'main.html'; // 메인 페이지 링크 추가
-});
