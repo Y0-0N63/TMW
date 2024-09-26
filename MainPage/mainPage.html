@@ -8,13 +8,19 @@
   </head>
 
   <body>
-    <!-- ⭐헤더 -->
+    <!-- 상단바 -->
     <div id="header">
       <img id="logo" src="../img/logo.png" width="100px" height="100px" />
       <div id="headerFunc">
-        <a id="search" href="#검색페이지랑 연결">검색하기</a>
+        <!-- 검색 -->
+        <header id="header">
+          <input type="text" id="search" placeholder="검색어를 입력하세요" />
+          <button id="searchBtn">🔍</button>
+        </header>
         <a id="a_signUp" href="회원가입페이지랑 연결">회원가입</a>
-        <button id="a_login" >로그인 성공 확인용 버튼</button>
+        <div id="LoginInfo"><span id="TopUserName"></span>님</div>
+        <br />
+        <!-- <button id="a_login">로그인 성공 확인용 버튼</button> -->
       </div>
       <br />
     </div>
@@ -34,15 +40,17 @@
           <a href="센터 찾기 페이지로 이동">센터 찾기&프로그램 신청하기</a>
         </div>
       </div>
-      
+
       <div class="menu">
         <a href="#">고객센터</a>
         <div class="submenu">
           <a href="#자주묻는 질문 페이지로 이동">자주묻는 질문</a>
-          <a href="#문의/제안/신고">문의/제안/신고</a>
-          <a href="#">이용약관</a>
-          <a href="#">개인정보처리방침</a>
-          <a href="#">위치기반서비스이용약관</a>
+          <a href="#문의/제안/신고 페이지로 이동">문의/제안/신고</a>
+          <a href="#이용약관 페이지로 이동">이용약관</a>
+          <a href="#개인정보처리방침 페이지로 이동">개인정보처리방침</a>
+          <a href="#위치기반서비스이용약관 페이지로 이동"
+            >위치기반서비스이용약관</a
+          >
         </div>
       </div>
     </div>
@@ -56,16 +64,33 @@
         </div>
         <div id="login">
           <div id="beforeLogin">
-            <button id="psnLogin" onclick="location.href='로그인 페이지로 이동'">개인로그인</button><br />
-            <button id="cpnLogin" onclick="location.href='로그인 페이지로 이동'">기업로그인</button><br />
+            <button
+              id="psnLogin"
+              onclick="location.href='로그인 페이지로 이동'"
+            >
+              개인로그인</button
+            ><br />
+            <button
+              id="cpnLogin"
+              onclick="location.href='로그인 페이지로 이동'"
+            >
+              기업로그인</button
+            ><br />
             <a href="아이디, 비번 찾기 페이지로 이동">아이디 비밀번호 찾기</a>
           </div>
           <div id="afterLogin">
-            <a href="회원정보 페이지로 이동">회원정보</a><br>
-            <a href="신청 일자리&프로그램 조회 페이지로 이동">신청 일자리&프로그램 조회</a><br>
-            <a href="이력서 페이지로 이동">이력서 작성</a><br>
-          <a href="javascript:location.reload()">로그아웃</a>
-
+            <a href="회원정보 페이지로 이동"
+              ><button class="mypageBtn">회원정보</button></a
+            ><br />
+            <a href="신청 일자리&프로그램 조회 페이지로 이동">
+              <button class="mypageBtn">신청 일자리&프로그램 조회</button> </a
+            ><br />
+            <a href="이력서 페이지로 이동">
+              <button class="mypageBtn">이력서 작성</button></a
+            ><br />
+            <a href="javascript:location.reload()"
+              ><button class="mypageBtn">로그아웃</button></a
+            >
           </div>
         </div>
       </div>
@@ -89,21 +114,23 @@
           </ul>
         </div>
         <div id="chatBotContainer">
-          <img src="../img/챗봇.png" alt="챗봇 이미지" onclick="location.href='챗봇페이지로 연결'" />
+          <img
+            src="../img/챗봇.png"
+            alt="챗봇 이미지"
+            onclick="location.href='챗봇페이지로 연결'"
+          />
         </div>
       </div>
     </div>
     <!-- ⭐푸터 -->
     <div id="footer">
-      <a class="footer_a" href="">이용약관 |</a>
-      <a class="footer_a" href="">개인정보처리방침 |</a>
-      <a class="footer_a" href="">제휴 및 광고문의 |</a>
-      <a class="footer_a" href="">자주 묻는 질문(개인용) |</a>
-      <a class="footer_a" href="">자주 묻는 질문(기업용) |</a>
-      <a class="footer_a" href="">1:1 문의</a>
-      <br />
-    </div>
+        <a class="footer_a" href="">자주 묻는 질문 |</a>
+        <a class="footer_a" href="">문의/제안/신고 |</a>
+        <a class="footer_a" href="">이용약관 |</a>
+        <a class="footer_a" href="">개인정보처리방침 |</a>
+        <a class="footer_a" href="">위치기반서비스이용약관 </a>
+        <br />
+      </div>
   </body>
   <script src="./mainPage.js"></script>
-  
 </html>
