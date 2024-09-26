@@ -55,7 +55,7 @@ body a:hover{
   background-color: lightgray;
 }
 #a_signUp{
-  margin: 0 10px;
+  margin: 0 100px 0 0;
 }
 #a_login{
   margin: 0 20px;
@@ -66,6 +66,73 @@ body a:hover{
   font-weight: 700;
 }
 
+/* 상단바 */
+.TopBar {
+  height: 100px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#logo {
+  height: 90%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#LoginInfo {
+  font-size: x-large;
+  font-weight: bold;
+  color: gray;
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+#search {
+  width: 300px;
+  height: 50px;
+  margin-right: 10px;
+  font-size: large;
+}
+
+#searchBtn {
+  width: 60px;
+  height: 50px;
+  background-color: transparent;
+  border: 0;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+#searchBtn:hover {
+  background-color: lightgray;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+#header nav a {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 10px;
+  color: #0168bd;
+  text-decoration: none;
+}
+
+#header nav a:hover {
+  text-decoration: underline;
+}
 
 /*⭐카테고리*/
 #category {
@@ -158,6 +225,8 @@ a {
   font-weight: 700;
   background-color: #a5d7ff;
   border: 0px;
+  border-radius: 25px;
+
 }
 
 #cpnLogin {
@@ -169,30 +238,39 @@ a {
   font-weight: 700;
   background-color: #328ad2;
   border: 0px;
-}
+  border-radius: 25px;
 
-#mngLogin {
-  width: 200px;
-  height: 40px;
-  margin: 10px 0 10px 0;
-  color: white;
-  font-size: 17px;
-  font-weight: 700;
-  background-color: #0168bd;
-  border: 0px;
 }
 
 #psnLogin:hover,
-#cpnLogin:hover,
-#mngLogin:hover {
+#cpnLogin:hover {
   background-color: lightgray;
   cursor: pointer;
+  
 }
 
 #afterLogin{
   display: none;
 }
 
+.mypageBtn{
+  min-width: 211px;
+  height: 40px;
+  padding: 10px;
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+  background-color: #b8babd;
+  border: 0px;
+  border-radius: 25px;
+  line-height: 23px;
+}
+.mypageBtn:hover{
+  background-color: #328ad2;
+  
+}
+
+/* 공지사항 */
 #notice {
   width: 600px;
   border: 2px solid black;
@@ -221,6 +299,8 @@ li {
   list-style-position: inside;
 }
 
+
+/* 챗봇 */
 #chatBotContainer {
   width: 200px;
   height: 150px;
@@ -233,6 +313,7 @@ li {
 #chatBotContainer img {
   width: 100%;
   height: 70%;
+  cursor: pointer;
 }
 
 /**************푸터***********/
