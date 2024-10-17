@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <style>
+    /* CSS 코드 */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .signup-container {
+      width: 100%;
+      max-width: 500px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 50px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo img {
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .signup-form h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #336edb;
+      color: #fff;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #285bb5;
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    p a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <div class="logo">
+      <img src="./logo_rmv (1).png" alt="Logo"> <!-- 로고 이미지 -->
+    </div>
+    <form id="signupForm" class="signup-form">
+      <h2>회원가입</h2>
+      <div class="input-group">
+        <label for="username">이름</label>
+        <input type="text" id="username" name="username" placeholder="이름을 입력하세요" required>
+      </div>
+      <div class="input-group">
+        <label for="phonenumber">전화번호</label>
+        <input type="text" id="phonenumber" name="phonenumber" placeholder="전화번호를 입력하세요" required>
+      </div>
+      <div class="input-group">
+        <label for="userpwd">비밀번호</label>
+        <input type="password" id="userpwd" name="userpwd" placeholder="비밀번호를 입력하세요" required>
+      </div>
+      <div class="input-group">
+        <label for="userpwdConfirm">비밀번호 확인</label>
+        <input type="password" id="userpwdConfirm" name="userpwdConfirm" placeholder="비밀번호를 다시 입력하세요" required>
+      </div>
+      <button type="submit">회원가입</button>
+    </form>
+  </div>
+
+  <script>
+    // JavaScript 코드
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('signupForm');
+      const usernameInput = document.getElementById('username');
+      const phoneInput = document.getElementById('phonenumber');
+      const userpwdInput = document.getElementById('userpwd');
+      const userpwdConfirmInput = document.getElementById('userpwdConfirm');
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = {
+          username: usernameInput.value,
+          phonenumber: phoneInput.value,
+          userpwd: userpwdInput.value,
+          userpwdConfirm: userpwdConfirmInput.value,
+        };
+
+        console.log('Form submitted:', formData);
+
+        if (formData.userpwd === formData.userpwdConfirm) {
+          alert('회원가입 성공');
+        } else {
+          alert('비밀번호가 일치하지 않습니다.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
